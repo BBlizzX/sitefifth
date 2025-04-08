@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.getElementById('distanceValue').textContent = Math.max(0, distance - 10);
 
           // Перевірка досягнення пункту призначення
-          if (distance <= 5) {
+          if (distance <= 1) {
             const destinationModal = document.getElementById('destinationModal');
             if (destinationModal && destinationModal.style.display === 'none') {
               destinationModal.style.display = 'flex';
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const hintC = 2 * Math.atan2(Math.sqrt(hintA), Math.sqrt(1 - hintA));
             const hintDistance = Math.round(R * hintC);
 
-            if (hintDistance <= 15) {
+            if (hintDistance <= 10) {
               hintBox.style.display = 'block';
               hintBox.textContent = hint.text;
               showingHint = true;
